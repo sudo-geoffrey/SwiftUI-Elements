@@ -14,11 +14,11 @@ struct ContentView: View {
     var body: some View {
         ZStack{
             TabView{
-                Tab("Stacks",systemImage: "square.stack") {
-                    Stacks_and_Gradients()
+                Tab("Blur Effects",systemImage: "pencil.and.outline") {
+                    BlurEffect()
                 }
-                Tab("Animations", systemImage:"figure.run"){
-                    Animations()
+                Tab("Frames", systemImage:"photo"){
+                    Frames()
                 }
                 Tab("Grids", systemImage:"squareshape.split.3x3"){
                     Grids()
@@ -35,5 +35,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(showIntro: true)
+    ContentView(showIntro: false)
 }

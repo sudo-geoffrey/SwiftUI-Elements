@@ -23,25 +23,6 @@ struct springExample: View {
     
     @State private var font: Font = .caption
     var body: some View {
-        VStack {
-            Text("Spring Animation")
-                .font(.title)
-                .scaleEffect(textBig ? 1 : 1.1)
-                .onTapGesture {
-                    withAnimation(.spring) {
-                        textBig.toggle()
-                    }
-                }
-            RoundedRectangle(cornerRadius: 17)
-                .foregroundStyle(rectangleOffset ? myGradient : myGradient2)
-                .aspectRatio(1.0, contentMode: .fit)
-                .frame(width: 150, height: 100)
-                .offset(x: rectangleOffset ? 100 : -100, y: 0)
-                .onTapGesture{
-                    withAnimation(.spring){
-                        rectangleOffset.toggle()
-                    }
-                }
             VStack(spacing: 15) {
                 Text("Font Animation")
                     .font(.title)
@@ -61,7 +42,6 @@ struct springExample: View {
             Spacer()
         }
     }
-}
 
 
 struct Animations: View {
